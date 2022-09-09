@@ -4,6 +4,7 @@ int main()
 {
     // Write C code here
     int s1, s2, s3;
+
     printf("Enter sides of the triangle:\n ");
     scanf("%d%d%d", &s1, &s2, &s3);
 
