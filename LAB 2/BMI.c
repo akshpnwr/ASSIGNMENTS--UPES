@@ -1,5 +1,5 @@
-#include <stdio.h>
-int main()
+// #include <stdio.h>
+int BMI()
 {
 
     float height, weight;
@@ -9,11 +9,7 @@ int main()
     printf("Enter weight of the person(in kg): ");
     scanf("%f", &weight);
 
-    printf("\n%f\n%f", height, weight);
-
     float BMI = weight / (height * height);
-
-    printf("\n%f", BMI);
 
     if (BMI < 15)
         printf("\nStarvation");
@@ -36,6 +32,6 @@ int main()
     else if (BMI >= 40)
         printf("\nMorbidity Obese");
     else
-        printf("\nInvalid input");
+        printf("\nDoesn't belong in the existing categories.");
     return 0;
 }

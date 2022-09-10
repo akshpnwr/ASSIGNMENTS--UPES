@@ -2,6 +2,12 @@
 #include <conio.h>
 #include <stdlib.h>
 
+#include "Triangle.c"
+#include "BMI.c"
+#include "Collinearity.c"
+#include "Calender.c"
+#include "Rectangle.c"
+
 int main()
 {
     int choice = 1;
@@ -26,21 +32,27 @@ int main()
         switch (choice)
         {
         case 1:
-            printf("CHOICE 1");
+            printf("\n-----------------\n");
+            triangle();
             break;
         case 2:
-            printf("CHOICE 2");
+            printf("\n-----------------\n");
+            BMI();
             break;
         case 3:
-            printf("CHOICE 3");
+            printf("\n-----------------\n");
+            collinearity();
             break;
         case 4:
-            printf("CHOICE 4");
+            printf("\n-----------------\n");
+            calender();
             break;
         case 5:
-            printf("CHOICE 5");
+            printf("\n-----------------\n");
+            rectangle();
             break;
         default:
+            printf("\n-----------------\n");
             printf("Exiting...");
             break;
         }

@@ -1,5 +1,5 @@
-#include <stdio.h>
-int main()
+// #include <stdio.h>
+int calender()
 {
     int year;
 
@@ -14,7 +14,7 @@ int main()
 
     int day = (leapYears * 366 + nonLeapYears * 365) % 7;
 
-    printf("Day: ");
+    printf("On 1st Jan of %d the day is: ", year);
 
     switch (day)
     {
