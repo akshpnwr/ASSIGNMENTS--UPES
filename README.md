@@ -1,1 +1,1 @@
-A repository containing various programs i coded as an assignment for the Data Structures subject.
+A repository containing all the assignments of MCA curriculum at UPES.
