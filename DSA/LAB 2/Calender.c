@@ -1,10 +1,11 @@
-// #include <stdio.h>
 int calender()
 {
     int year;
 
     printf("Enter any year: ");
     scanf("%d", &year);
+
+    printf("On 1st Jan of %d the day is: ", year);
 
     year -= 1; // Subtracting days of given year
 
@@ -13,8 +14,6 @@ int calender()
     int nonLeapYears = year - leapYears;
 
     int day = (leapYears * 366 + nonLeapYears * 365) % 7;
-
-    printf("On 1st Jan of %d the day is: ", year);
 
     switch (day)
     {
