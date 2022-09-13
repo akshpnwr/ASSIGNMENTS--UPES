@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main()
+int CountNumbers()
 {
     int num, a;
     char choice = 'Y';

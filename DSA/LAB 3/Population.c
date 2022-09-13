@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
+int Population()
 {
 
     float population = 100000;
@@ -11,7 +11,7 @@ int main()
         printf("\nPopulation at year %d = %.2f", i, population);
     }
 
-    printf("\nAfter a decade: %.2f", population);
+    printf("\n\nAfter a decade: %.2f", population);
 
     return 0;
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-int main()
+int Pascal()
 {
 
     // Solution - 1 - incomplete (works only till 5 rows)

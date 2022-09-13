@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main()
+int Pattern()
 {
 
     int printValue = 1;
