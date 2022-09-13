@@ -13,7 +13,6 @@ int BMI()
 
     if (BMI < 15)
         printf("\nStarvation");
-
     else if (BMI >= 15.1 && BMI <= 17.5)
         printf("\nAnorexic");
 

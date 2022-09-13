@@ -11,8 +11,7 @@
 int main()
 {
     int choice = 1;
-
-    printf("%d", choice);
+    int checkInput;
 
     while (choice != 0)
     {
@@ -27,10 +26,21 @@ int main()
         printf("\n0. Exit");
 
         printf("\nEnter your choice: ");
-        scanf("%d", &choice);
+
+        if (scanf("%d", &choice) != 1)
+        {
+            printf("\nENTER A VALID INPUT!! NO ALPHABETS ALLOWED!!");
+            printf("\nEXITING");
+            exit(1);
+        }
 
         switch (choice)
         {
+        case 0:
+            printf("\n-----------------\n");
+            printf("Exiting....");
+            exit(1);
+            break;
         case 1:
             printf("\n-----------------\n");
             triangle();
@@ -52,9 +62,8 @@ int main()
             rectangle();
             break;
         default:
+            printf("Something went wrong!");
             printf("\n-----------------\n");
-            printf("Exiting...");
-            break;
         }
 
         printf("\nPress any key to continue..... ");

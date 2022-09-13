@@ -247,29 +247,29 @@ int main()
 // Exp 12//
 //////////
 
-// #include <stdio.h>
-// int main()
-// {
+#include <stdio.h>
+int main()
+{
 
-//     // Amount given
-//     int amount = 464, count = 0, quotient, index = 0;
+    // Amount given
+    int amount = 464, count = 0, quotient, index = 0;
 
-//     // Notes allowed
-//     int notes[7] = {100, 50, 20, 10, 5, 2, 1};
+    // Notes allowed
+    int notes[7] = {100, 50, 20, 10, 5, 2, 1};
 
-//     printf("Amount: %d", amount);
+    printf("Amount: %d", amount);
 
-//     while (amount)
-//     {
+    while (amount)
+    {
 
-//         quotient = amount / notes[index];
-//         amount = amount % notes[index];
+        quotient = amount / notes[index];
+        amount = amount % notes[index];
 
-//         count = count + quotient; // Counting notes
+        count = count + quotient; // Counting notes
 
-//         index++;
-//     }
+        index++;
+    }
 
-//     printf("\nNumber of notes: %d", count);
-//     return 0;
-// }
+    printf("\nNumber of notes: %d", count);
+    return 0;
+}
