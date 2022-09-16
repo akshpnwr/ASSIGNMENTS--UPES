@@ -1,5 +1,7 @@
+#ifndef DTO
+#define DTO
 
-int getOctal(int num)
+int decimalToOctal(int num)
 {
 
     printf("Octal of %d = ", num);
@@ -20,3 +22,5 @@ int getOctal(int num)
 
     return 0;
 }
+
+#endif

@@ -1,4 +1,7 @@
-int getHexadecimal(int num)
+#ifndef DTH
+#define DTH
+
+int decimalToHexadecimal(int num)
 {
 
     printf("Hexadecimal of %d = ", num);
@@ -37,3 +40,5 @@ int getHexadecimal(int num)
 
     return 0;
 }
+
+#endif

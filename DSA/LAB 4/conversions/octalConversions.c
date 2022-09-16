@@ -1,25 +1,22 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
+#include "./octalTo/octalToDecimal.c"
+#include "./octalTo/octalToBinary.c"
+#include "./octalTo/octalToHexadecimal.c"
 
-#include "./conversions/decimalConversions.c"
-#include "./conversions/binaryConversions.c"
-#include "./conversions/octalConversions.c"
-#include "./conversions/hexadecimalConversions.c"
-
-int main()
+int octalConversions()
 {
+    int choice = 1, checkInput, num;
 
-    int choice = 1, checkInput;
+    printf("\n----------------------------------------\n");
+    printf("Enter an octal number: ");
+    scanf("%d", &num);
 
     while (choice != 0)
     {
 
         printf("\n\n--------Please select an option---------");
-        printf("\n1. Convert from Decimal");
-        printf("\n2. Convert from Binary");
-        printf("\n3. Convert from Octal");
-        printf("\n4. Convert from Hexadecimal");
+        printf("\n1. Convert to Decimal");
+        printf("\n2. Convert to Binary");
+        printf("\n3. Convert to Hexadecimal");
 
         printf("\n----------------------------------------");
         printf("\n0. Exit");
@@ -42,19 +39,15 @@ int main()
             break;
         case 1:
             printf("\n-----------------\n");
-            decimalConversions();
+            octalToDecimal(num);
             break;
         case 2:
             printf("\n-----------------\n");
-            binaryConversions();
+            octalToBinary(num);
             break;
         case 3:
             printf("\n-----------------\n");
-            octalConversions();
-            break;
-        case 4:
-            printf("\n-----------------\n");
-            hexadecimalConversions();
+            octalToHexadecimal(num);
             break;
         default:
             printf("Something went wrong!");

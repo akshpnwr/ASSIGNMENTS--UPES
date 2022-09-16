@@ -16,7 +16,7 @@ int fibonnaci(int num1, int num2, int count)
     return fibonnaci(num2, num1 + num2, count - 1);
 }
 
-int main()
+int fib()
 {
 
     int limit;

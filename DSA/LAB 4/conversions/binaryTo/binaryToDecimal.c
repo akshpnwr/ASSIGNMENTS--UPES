@@ -1,0 +1,24 @@
+#include <math.h>
+#ifndef BTD
+#define BTD
+
+int binaryToDecimal(int num)
+{
+    int digit, decimal = 0, index = 0;
+
+    while (num != 0)
+    {
+        digit = num % 10;
+
+        decimal = decimal + digit * pow(2, index);
+
+        index++;
+        num = num / 10;
+    }
+
+    printf("\nDecimal : %d", decimal);
+
+    return decimal;
+}
+
+#endif

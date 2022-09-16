@@ -1,4 +1,7 @@
-int getBinary(int num)
+#ifndef DTB
+#define DTB
+
+int decimalToBinary(int num)
 {
     printf("Binary of %d = ", num);
 
@@ -18,3 +21,5 @@ int getBinary(int num)
 
     return 1;
 }
+
+#endif
