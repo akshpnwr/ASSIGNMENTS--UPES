@@ -22,7 +22,6 @@ void sort(int arr[], int n)
 int Ramanujan()
 {
 
-    // 210 is the number of all possible combinations of sum of cubes
     int arr[1000] = {};
 
     int index = 0;

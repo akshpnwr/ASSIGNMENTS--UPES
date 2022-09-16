@@ -21,8 +21,8 @@ int main()
         printf("\n1. Experiment 1 - Count positive, negative and zeroes");
         printf("\n2. Experiment 2 - Multiplication table");
         printf("\n3. Experiment 3 - Patterns");
-        printf("\n5. Experiment 4 - Population");
-        printf("\n6. Experiment 5 - Ramanujan");
+        printf("\n4. Experiment 4 - Population");
+        printf("\n5. Experiment 5 - Ramanujan");
 
         printf("\n----------------------------------------");
         printf("\n0. Exit");
