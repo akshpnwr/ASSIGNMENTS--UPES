@@ -7,7 +7,7 @@ int decimalConversions()
 
     int choice = 1, checkInput, num;
 
-    printf("\n----------------------------------------");
+    printf("\n----------------------------------------\n");
     printf("Enter a decimal number: ");
     scanf("%d", &num);
 

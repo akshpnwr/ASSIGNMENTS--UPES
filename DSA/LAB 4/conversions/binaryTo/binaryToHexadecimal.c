@@ -4,7 +4,6 @@
 
 int binaryToHexadecimal(int num)
 {
-    printf("BTH");
     int decimal = binaryToDecimal(num);
     printf("\n");
     decimalToHexadecimal(decimal);
