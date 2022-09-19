@@ -1,4 +1,3 @@
-from operator import le
 
 
 print('Enter marks of the student(out of 100): ')
