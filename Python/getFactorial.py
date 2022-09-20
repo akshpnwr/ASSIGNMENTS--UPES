@@ -5,4 +5,5 @@ def getFactorial(num):
         return num*getFactorial(num-1)
 
 
-print(getFactorial(5))
+num = int(input('Enter a number: '))
+print('Factorial of ' + str(num) + ' is ' + str(getFactorial(num)))
