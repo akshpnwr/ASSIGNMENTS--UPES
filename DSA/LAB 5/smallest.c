@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main()
+int smallest()
 {
 
     int size;

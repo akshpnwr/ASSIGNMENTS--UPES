@@ -1,12 +1,14 @@
 #include <stdio.h>
-int main()
+int matrix()
 {
 
     int row, col;
 
-    printf("Enter row and column of the matrix : ");
+    printf("Enter rows of the matrix : ");
 
     scanf("%d", &row);
+    printf("Enter columns of the matrix : ");
+
     scanf("%d", &col);
 
     int arr[row][col];
@@ -61,9 +63,12 @@ int main()
 
     if (isSymmetric)
     {
-        printf("\nSymmetric!!!!!!!!!\n");
+        printf("\nMatrix is Symmetrical\n");
     }
-
+    else
+    {
+        printf("\nMatrix is not Symmetrical");
+    }
     // extra code
     // int row = 3, col = 3;
     // int newArr[3][3] = {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}};
