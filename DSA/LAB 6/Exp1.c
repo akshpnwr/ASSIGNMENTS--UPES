@@ -9,17 +9,30 @@ struct Cricketer
     int averageRuns;
 };
 
-int comparator(const void *p1, const void *p2)
+void sort(int arr[], int n)
 {
-    return (*(int *)p1 - *(int *)p2);
-}
+    int i, j, minIndex, temp;
 
+    for (i = 0; i < n - 1; i++)
+    {
+
+        minIndex = i;
+        for (j = i + 1; j < n; j++)
+            if (arr[j] < arr[minIndex])
+                minIndex = j;
+
+        temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+}
 int main()
 {
-    struct Cricketer c[3];
+    int size = 20;
+    struct Cricketer c[20];
 
     printf("Enter details of cricketers\n");
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 20; i++)
     {
         printf("Enter name of cricketer %d :", i + 1);
         scanf(" ");
@@ -34,18 +47,18 @@ int main()
         printf("\n");
     }
 
-    int runs[3];
+    int runs[20];
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 20; i++)
     {
         runs[i] = c[i].averageRuns;
     }
 
-    qsort(runs, 3, sizeof(int), comparator);
+    sort(runs, 20);
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 20; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < 20; j++)
         {
             if (runs[i] == c[j].averageRuns)
             {
