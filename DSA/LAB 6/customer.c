@@ -24,7 +24,7 @@ void printBelow100(struct Customer c[], int size)
 int customer()
 {
 
-    int size = 3;
+    int size = 4;
     printf("Enter details of the customers\n");
 
     struct Customer c[size];
