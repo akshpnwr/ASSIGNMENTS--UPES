@@ -3,6 +3,19 @@ const inputEmailElement = document.getElementById('mail');
 const formElement = document.querySelector('.form');
 const inputMobileElement = document.getElementById('mobile');
 const inputQuantitiesElement = document.getElementById('quantities');
+const inputProductsElement = document.getElementById('products');
+
+// const penPrice = 10;
+// const notebookPrice = 30;
+// const pencilPrice = 5;
+// const colorPrice = 40;
+
+const prices = {
+  pen: 10,
+  notebook: 30,
+  pencil: 5,
+  color: 40,
+};
 
 function containsNumber(str) {
   return /[0-9]/.test(str);
@@ -31,7 +44,17 @@ const onSubmit = (event) => {
     return;
   }
 
-  alert('order succesfully recieved');
+  console.log(inputProductsElement.value);
+  console.log(inputQuantitiesElement.value);
+
+  const totalBill =
+    Number(prices[inputProductsElement.value]) *
+    Number(inputQuantitiesElement.value);
+
+  console.log(totalBill);
+  alert(`order succesfully recieved!
+Your total bill : ${totalBill} 
+  `);
 };
 
 const validateName = (e) => {
