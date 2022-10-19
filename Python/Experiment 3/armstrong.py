@@ -14,6 +14,6 @@ def isArmstrong(num):
     return False
 
 
-for i in range(1, 100):
+for i in range(1, 1000):
     if (isArmstrong(i)):
         print(str(i) + ' is an armstrong')

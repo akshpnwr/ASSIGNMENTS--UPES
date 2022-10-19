@@ -1,11 +1,11 @@
 # print('Please enter a string')
-enteredString = input('Please enter a string ')
+enteredString = input('Please enter a string : ')
 
 print(enteredString)
 spaces = 0
 alphabets = 0
 for i in enteredString:
-    if enteredString[i] == ' ':
+    if i == ' ':
         spaces += 1
     else:
         alphabets += 1
