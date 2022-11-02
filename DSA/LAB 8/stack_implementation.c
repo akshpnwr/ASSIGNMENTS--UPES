@@ -1,18 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
-
-
-// struct Stack
-// {
-//     int top;
-//     int *ptr;
-// };
+#include <conio.h>
+#include <stdbool.h>
+#include <ctype.h>
 
 #define size 5
-// 
 int* stack;
 int top = 0;
 
+void init() {
+    stack = calloc(size, sizeof(int*));
+}
 
 void push(int value) {
 
@@ -32,7 +30,7 @@ int pop() {
     if (top==0)
     {
      
-        fprintf(stderr,"\n-----UNDERFLOW-----");
+        fprintf(stderr,"\n-----UNDERFLOW-----\n");
         return -1;
     }
     
@@ -50,32 +48,15 @@ void printStack() {
 
 }
 
-int main() {
-
-    stack = calloc(size, sizeof(int*));
-
-    push(1);
-    push(2);
-    push(3);
-    // push(4);
-    // push(5);
-    // push(5);
-    // push(5);
-    // push(5);
-    
-    printf("Before : ");
-    printStack();
-
-    pop();
-    pop();
-    pop();
-    pop();
-
-
-    printf("\n");
-
-    printf("After : ");
-    printStack();
-
-return 0;
+bool isEmpty() {
+    return (top == 0);
 }
+
+int peak(){
+    return stack[top-1];
+}
+
+int sizeOfStack(){
+    return top;
+}
+
