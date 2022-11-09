@@ -54,7 +54,8 @@ int main() {
     init();
 
     char str[20];
-    printf("Enter a string : ");
+    printf("\n\n");
+    printf("Please enter a string/number => ");
     fgets(str, 20, stdin);
     
     int length = strlen(str)-1;
@@ -80,11 +81,13 @@ int main() {
     }
 
     if(res == 1) {
-        printf("The string/number is palindrome");
+        printf("PALINDROME");
+        printf("\n\n\n");
         return 0;
     }
 
-    printf("The string/number is NOT palindrome");
+        printf("NOT PALINDROME\n\n\n");
+
 
 
 return 0;
