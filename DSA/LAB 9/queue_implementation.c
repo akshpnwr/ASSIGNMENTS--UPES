@@ -45,6 +45,21 @@ void display() {
     
 }
 
+void reverse(int front, int rear) {
+
+    if (front >= rear)
+    {
+        return;
+    }
+
+    else {
+        int temp = queue[front];
+        queue[front] = queue[rear];
+        queue[rear] = temp;
+
+        reverse(front+1, rear-1);
+    }
+}
 
 
 int main() {
@@ -53,13 +68,16 @@ int main() {
     enqueue(2);
     enqueue(3);
     enqueue(4);
+    enqueue(5);
+
 
     dequeue();
     dequeue();
    
 
     display();
-
+    reverse(front, rear-1);
+    display();
     
 return 0;
 }
