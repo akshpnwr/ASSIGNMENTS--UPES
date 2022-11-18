@@ -47,6 +47,32 @@ void insertionSort(int* arr) {
     }
 }
 
+void selectionSort(int* arr) {
+    
+    int min, min_index, temp;
+    for (int i = 0; i < size; i++)
+    {
+        min = arr[i];
+
+        for (int j = i+1; j < size; j++)
+        {
+            if (arr[j] < min)
+            {
+                min = arr[j];
+                min_index = j;
+            }
+        }
+
+        if (arr[i] != min)
+        {
+            temp = arr[i];
+            arr[i] = min;
+            arr[min_index] = temp;
+        }
+
+    }
+    
+}
 
 int main() {
     srand ( time(NULL) );
@@ -57,7 +83,8 @@ int main() {
 
 
     display(arr);
-    insertionSort(arr);
+    // insertionSort(arr);
+    selectionSort(arr);
     display(arr);
 
 
