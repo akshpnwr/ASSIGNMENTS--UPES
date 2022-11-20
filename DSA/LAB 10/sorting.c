@@ -7,13 +7,13 @@ int size;
 
 int* generateArray(int n) {
 
-    int num =  rand() % 10 + 1;
+    int num =  rand() % 100 + 1;
     int* arr = (int*) malloc(n*sizeof(int));
     arr[0] = num;
 
     for (int i = 1; i < n; i++)
     {   
-        num =  rand() % 10 + 1;
+        num =  rand() % 100 + 1;
         arr[i] = num;
     }
     
@@ -114,7 +114,6 @@ void merge(int* arr, int l, int m, int r) {
         k++;
     }
     
-
 }
 
 void mergeSort(int* arr, int l, int r) {  
@@ -132,17 +131,81 @@ void mergeSort(int* arr, int l, int r) {
 
 }
 
+int part(int arr[], int low, int high)
+{
+    int pivot = arr[high];
+    int i = low - 1, temp;
+  
+    for (int j = low; j <= high - 1; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+    temp = arr[i+1];
+    arr[i+1] = arr[high];
+    arr[high] = temp;
+    return (i + 1);
+}
+
+void quickSort(int* arr, int low, int high) {
+
+    if (low < high)
+    {
+
+    int pivot = part(arr, low, high);
+
+    quickSort(arr , low, pivot - 1);
+
+    quickSort(arr, pivot + 1, high);
+    
+    }
+    
+}
+
 int main() {
     srand ( time(NULL) );
     printf("Enter number of elements you want : ");
     scanf("%d",&size);
 
     int* arr = generateArray(size);
+    int* tempArr = arr;
+    clock_t t;
+    t = clock();
+    double time_taken;
 
+    printf("The elements are : ");
     display(arr);
-    // insertionSort(arr);
-    // selectionSort(arr);
+    printf("\n\nPerforming Insertion sort...");
+    insertionSort(arr);
+     t = clock() - t;
+    time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
+    printf("Insertion sort took %f seconds to execute \n", time_taken);
+
+    arr = tempArr;
+    printf("\nPerforming Selection sort...");
+    selectionSort(arr);
+    t = clock() - t;
+    time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
+    printf("Selection sort took %f seconds to execute \n", time_taken);
+
+    arr = tempArr;
+    printf("\nPerforming Merge sort...");
     mergeSort(arr, 0 , size-1);
+    t = clock() - t;
+    time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
+    printf("Merge sort took %f seconds to execute \n", time_taken);
+
+    arr = tempArr;
+    printf("\nPerforming Quick sort...");
+    quickSort(arr, 0,size-1);
+    t = clock() - t;
+    time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
+    printf("Quick sort took %f seconds to execute \n", time_taken);
+    
+    printf("\nThe elements after sorting are : ");
     display(arr);
 
 
