@@ -134,6 +134,22 @@ void deleteCurrent(struct Node* root, struct Node* node) {
 
 }
 
+void checkMultiples(struct Node* node) {
+    if (node == NULL)
+    {
+        return;    
+    }
+
+    checkMultiples(node->left);
+
+    if (node->data % 3 == 0)
+    {
+        node->data = 5;
+    }
+    
+    checkMultiples(node->right);
+}
+
 int main() {
     int choice = 1;
     int checkInput;
@@ -168,6 +184,8 @@ int main() {
         printf("\n8. Traverse - In-order");
         printf("\n9. Traverse - Post-order");
         printf("\n10. Reset");
+        printf("\n11. Replace multiples of 3 with 5");
+
 
         printf("\n----------------------------------------");
         printf("\n0. Exit");
@@ -230,6 +248,11 @@ int main() {
             printf("\n-----------------\n");
             printf("\nReset successful...Moved to root node\n");
             root = rootNode;
+            break;
+        case 11:
+            printf("\n-----------------\n");
+            checkMultiples(rootNode);
+            printf("\nReplaced successfully\n");
             break;
         default:
             printf("Something went wrong!");
