@@ -61,9 +61,10 @@ int main() {
     root->right = createNode('e');
     root->right->left = createNode('o');
     root->right->right = createNode('x');
-
+    printf("Before replacing : ");
     inOrder(root);
     replace(root);
+    printf("\nAfter replacing : ");
     inOrder(root);
 
 return 0;

@@ -154,18 +154,13 @@ int main() {
     int choice = 1;
     int checkInput;
 
-    // int data;
-    // printf("Enter data of the root node : ");
-    // scanf("%d",&data);
+    int data;
+    printf("Enter data of the root node : ");
+    scanf("%d",&data);
 
-    struct Node* root = createNode(10);
+    struct Node* root = createNode(data);
 
     struct Node* rootNode = root;
-    root->left = createNode(11);
-    root->left->left = createNode(7);
-    root->right = createNode(9);
-    root->right->left = createNode(15);
-    root->right->right = createNode(8);
 
     printf("\nIn - order traversal : ");
     inOrder(root);
