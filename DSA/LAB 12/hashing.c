@@ -23,14 +23,11 @@ hash* createNode(int value) {
 
 void init() {
     for (int i = 0; i < MAX_SIZE; i++) arr[i] = createNode(-1); 
-    
 }
 
-void insert(int value) {
+void performChaining(int value) {
 
-    if (arr[value%10]->value == -1) arr[value % 10] = createNode(value);
-    else {
-        int mod = value%10;
+        int mod = value%MAX_SIZE;
 
         hash* temp = arr[mod];
         hash* node = createNode(value);
@@ -42,12 +39,34 @@ void insert(int value) {
         
         temp->next = node;
 
+}
+
+void linearProbing(int value) {
+    
+    for (int i = 0; i < MAX_SIZE; i++)
+    {
+        if (arr[i]->value == -1)
+        {
+            arr[i]->value = value;
+            break;
+        }
+        
+    }
+    
+}
+
+void insert(int value) {
+
+    if (arr[value%MAX_SIZE]->value == -1) arr[value % MAX_SIZE] = createNode(value);
+    else {
+        // performChaining(value);
+        linearProbing(value);
     }
     
 }
 
 void display() {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < MAX_SIZE; i++)
     {
         if (arr[i]->value != -1)
         {
@@ -72,6 +91,7 @@ void display() {
 
 int main() {
 
+init();
 
 int keys[] = {23,46,12,55,17,33,51,73};
 
