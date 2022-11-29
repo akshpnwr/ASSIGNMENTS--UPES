@@ -18,4 +18,5 @@ r1 = Rectangle(length,breadth)
 
 print('The length and breadth of the rectangle is {} {}'.format(r1.length, r1.breadth))
 print('Area of the rectangle is {}'.format(r1.area()))
-# print(r1.perimeter())
+print('Perimeter of the rectangle is {}'.format(r1.perimeter()))
+

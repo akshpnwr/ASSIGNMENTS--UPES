@@ -39,3 +39,19 @@ for i in range(1,5):
     print()
     spaces-=2
             
+
+print("\n")
+
+i = 1
+check = 1
+for i in range(1, 6):
+    
+    for k in range(1, check+1):
+        print(end=" ")
+
+    for j in range(i, 6):
+        print(j,end="")
+    
+    check += 1
+
+    print("\n")

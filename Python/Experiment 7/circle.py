@@ -13,5 +13,3 @@ radius = int(input('Please enter radius of the circle : '))
 c1 = Circle(radius)
 print('Area of the circle with radius {} is {}'.format(radius, c1.area()))
 print('Circumference of the circle with radius {} is {}'.format(radius, c1.circumference()))
-
-print(4 + 3 % 5)
