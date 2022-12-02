@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int smallest(int arr[], int size,int target, int* small, int* large) {
+int subarray(int arr[], int size,int target, int* small, int* large) {
     
     int sum = 0;
     int l = 0, r = 0;
@@ -55,13 +55,13 @@ int main() {
 
     int smallest_subarray_size = 0, largest_subarray_size = 0;
 
-    smallest(arr, size, target, &smallest_subarray_size, &largest_subarray_size);
+    subarray(arr, size, target, &smallest_subarray_size, &largest_subarray_size);
 
-    printf("Randomly generated array : ");
+    printf("\nRandomly generated array : ");
     for (int i = 0; i < size; i++) printf("%d ",arr[i]);
 
-    printf("\nSize of smallest sub-array whose sum is equal to %d : %d",target,smallest_subarray_size);
-    printf("\nSize of largest sub-array whose sum is equal to %d : %d",target,largest_subarray_size);
+    printf("\n\nSize of smallest sub-array whose sum is equal to %d : %d",target,smallest_subarray_size);
+    printf("\n\nSize of largest sub-array whose sum is equal to %d : %d",target,largest_subarray_size);
 
 
 return 0;

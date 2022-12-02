@@ -97,11 +97,19 @@ int keys[] = {23,46,12,55,17,33,51,73};
 
 int keysSize = sizeof(keys)/sizeof(int);
 
+printf("\nKeys to be inserted : ");
+for (int i = 0; i < keysSize; i++)
+{
+    printf("%d ", keys[i]);
+}
+
+
 for (int i = 0; i < keysSize; i++)
 {
     insert(keys[i]);
 }
 
+printf("\n\nInsertion completed !!\n");
 display();
 
 return 0;

@@ -54,3 +54,6 @@ while choice == 'y' or choice == 'Y':
         print('Exiting....')
         exit(0)
 
+
+# .\env\Scripts\activate
+# & "c:/Users/91639/Desktop/Python firebase/firebase/env/Scripts/Activate.ps1"                               

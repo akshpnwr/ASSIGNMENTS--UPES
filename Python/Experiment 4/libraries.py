@@ -1,13 +1,10 @@
 
-# n1 = int(input('Enter a number : '))
-# n2 = int(input('Enter another number : '))
 
 import math
 from random import randint, random
 
-
-n1 = 4
-n2 = 9
+n1 = int(input('Enter a number : '))
+n2 = int(input('Enter another number : '))
 
 print('Minimum of ' + str(n1) + ' and '+str(n2) + ' is ' + str(min(n1,n2)))
 print('Maximum of ' + str(n1) + ' and '+str(n2) + ' is ' + str(max(n1,n2)))
