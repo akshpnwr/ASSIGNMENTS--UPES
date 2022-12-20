@@ -28,6 +28,9 @@ myIteratorClass = IteratorClass(str)
 
 myiter = iter(myIteratorClass)
 
+print('String "{}" '.format(str))
+print('Display through my iterator : ')
+print(next(myiter))
 print(next(myiter))
 print(next(myiter))
 print(next(myiter))

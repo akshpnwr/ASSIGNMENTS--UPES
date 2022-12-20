@@ -59,13 +59,13 @@ s.push(4)
 s.push(5)
 s.push(6)
 
-print('Before Stack : ',end= '')
+print('Stack Before Popped: ',end= '')
 s.display()
 
 
 print('\nPopped value : ' + str(s.pop()))
 print('Popped value : ' + str(s.pop()))
 
-print('After Stack : ',end= '')
+print('Stack After Popped: ',end= '')
 
 s.display()
