@@ -41,17 +41,28 @@ void performChaining(int value) {
 
 }
 
-void linearProbing(int value) {
+void linearProbing(int value, int c) {
     
-    for (int i = 0; i < MAX_SIZE; i++)
+    int index = (value % MAX_SIZE+ c) % MAX_SIZE;
+
+    while (arr[index]->value != -1)
     {
-        if (arr[i]->value == -1)
-        {
-            arr[i]->value = value;
-            break;
-        }
-        
+        index = (value % MAX_SIZE+ c) % MAX_SIZE;
+        c++;
+
     }
+    
+    arr[index]->value = value;
+
+    // for (int i = 0; i < MAX_SIZE; i++)
+    // {
+    //     if (arr[i]->value == -1)
+    //     {
+    //         arr[i]->value = value;
+    //         break;
+    //     }
+        
+    // }
     
 }
 
@@ -60,7 +71,7 @@ void insert(int value) {
     if (arr[value%MAX_SIZE]->value == -1) arr[value % MAX_SIZE] = createNode(value);
     else {
         // performChaining(value);
-        linearProbing(value);
+        linearProbing(value, 0);
     }
     
 }
